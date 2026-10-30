@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KÉMOLUX | Authentication</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <div class="welcome-container">
+        <div class="auth-card" id="auth-section">
+            <h1 class="brand-name">KÉMOLUX</h1>
+            <p style="color: black;" class="tagline">Elegance Within Reach</p>
+            <h2 id="auth-title">Sign Up</h2>
+
+            <input type="text" id="username" placeholder="Full Name" autocomplete="name">
+            <input type="email" id="email" placeholder="Email Address" autocomplete="email">
+            <input type="password" id="password" placeholder="Password" autocomplete="current-password">
+            
+            <button class="btn" onclick="handleAuth()" id="auth-btn">Join Now</button>
+            
+            <p class="toggle-text" onclick="toggleMode()">
+                <span id="toggle-msg">Already have an account?</span> <span class="highlight" id="toggle-link">Login</span>
+            </p>
+            
+            <p class="forgot-pw" id="forgot-link" onclick="forgotPassword()" style="display:none;">Forgot Password?</p>
+        </div>
+
+        <a href="home.html" id="home-arrow">➜ Enter Store</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase-config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

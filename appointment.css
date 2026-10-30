@@ -1,0 +1,159 @@
+/* CONSOLIDATED STYLES */
+:root {
+    /* Primary Brand Palette */
+    --kemolux-purple: #4B0082;
+    --kemolux-accent: #2e7d32; 
+    --kemolux-glass: rgba(255, 255, 255, 0.1);
+    --white: #ffffff;
+    --text: #1a1a1a;
+    --bg-fallback: #f9f9f7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    color: var(--text);
+    min-height: 100vh;
+    /* This handles the background image AND the overlay */
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(10, 10, 10, 0.85)),
+        url('images/kemo.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps background stable during scroll */
+}
+
+/* HEADER & LOGO */
+header, .header {
+    width: 100%;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.logo {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    color: var(--text); /* Changed to black/dark text per your design */
+    letter-spacing: 5px;
+    color: black;
+    background: green;
+    border: 1px solid;
+    border-radius: 30px;
+    padding: 5px;
+}
+
+/* CONTAINERS */
+.glass-container {
+    width: 95%;
+    max-width: 550px;
+    background: var(--kemolux-glass);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    padding: 40px;
+    margin: 20px auto 50px auto; /* Centered margin */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* TYPOGRAPHY */
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.service-list {
+    color: green;
+    background: black;
+    border: 1px solid;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 30px;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    opacity: 0.9;
+}
+
+/* FORM ELEMENTS */
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    color: black;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+input, select, textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+    padding: 12px 5px;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.4s ease;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-bottom: 2px solid var(--kemolux-accent);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* BUTTONS */
+button, .btn {
+    width: 100%;
+    background: var(--kemolux-accent);
+    color: white;
+    padding: 18px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    letter-spacing: 2px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+button:hover, .btn:hover {
+    background: var(--kemolux-purple);
+    letter-spacing: 4px;
+}
+
+/* OTHER SECTIONS */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.service-box {
+    margin: 25px auto;
+    max-width: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}

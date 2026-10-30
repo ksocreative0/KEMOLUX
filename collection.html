@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KÉMOLUX</title>
+<link rel="stylesheet" href="global.css">
+<link rel="stylesheet" href="collection.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase-config.js"></script>
+<script src="script.js" defer></script>
+</head>
+
+<body>
+
+
+
+<div id="movable-assistant" class="assistant-floating-container">
+    <div class="assistant-box">
+        <div class="hero-model" id="drag-handle" style="cursor: move;">
+            <img src="images/kemo.jpeg" alt="Kemo Assistant" class="model-img">
+            <div class="model-info">
+                <h3>Kemm</h3>
+                <span class="status-dot"></span> Online
+            </div>
+            <span id="close-assistant" title="Close">&times;</span>
+        </div>
+
+        <div class="chat-bubble">
+            <p id="animated-text">Hi there!</p>
+        </div>
+
+        <a href="https://wa.me/+2349162102" class="wa-link" target="_blank">
+            Chat with Kemm
+        </a>
+    </div>
+</div>
+
+
+<!-- 🔝 FREE SHIPPING MARQUEE BAR -->
+<div class="shipping-bar">
+    <div class="marquee-track">
+        <span>Free shipping on all orders over ₦100,000 • Shop KÉMOLUX Luxury •</span>
+        <span>Free shipping on all orders over ₦100,000 • Shop KÉMOLUX Luxury •</span>
+    </div>
+</div>
+
+<section id="collection" class="page active">
+  <div class="container collection-wrap">
+    <div class="filter-bar-vertical">
+        <button class="filter-btn active" onclick="filterProducts('all', this)">All</button>
+        <button class="filter-btn" onclick="filterProducts('wig', this)">Wigs</button>
+        <button class="filter-btn" onclick="filterProducts('clothing', this)">Clothing</button>
+        <button class="filter-btn" onclick="filterProducts('shoes', this)">Shoes</button>
+        <button class="filter-btn" onclick="filterProducts('jewelry', this)">Jewelry</button>
+        <button class="filter-btn" onclick="filterProducts('glasses', this)">Glasses</button>
+        <button class="filter-btn" onclick="filterProducts('bags', this)">Bags</button>
+    </div>
+    <div id="productGrid" class="grid" style="flex:1"></div>
+  </div>
+</section>
+
+<div id="productModal" class="modal" onclick="closeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <div id="modalBody"></div>
+    </div>
+</div>
+
+
+<!-- 🔻 FOOTER NAV -->
+<footer class="bottom-nav">
+    <a href="home.html">🏠<span>Home</span></a>
+    <a href="collection.html">🛍<span>Collection</span></a>
+    <a href="wishlist.html">❤️<span>Wishlist</span></a>
+    <a href="cart.html">🛒<span>Cart</span></a>
+    <a href="service.html">💄<span>Services</span></a>
+</footer>
+
+<script>
+    const text = "I am Kemm, your shopping agent. Reach out if you ever need anything!";
+    let i = 0;
+    
+    function typeWriter() {
+        if (i < text.length) {
+            document.getElementById("animated-text").innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 50); // Speed of typing
+        }
+    }
+</script>
+</body>
+</html>

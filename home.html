@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KÉMOLUX</title>
+<link rel="stylesheet" href="global.css">
+<link rel="stylesheet" href="home.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase-config.js"></script>
+<script src="script.js" defer></script>
+</head>
+
+<body>
+
+<!-- 🔔 POPUP AD -->
+<div id="popupAd" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">×</span>
+      <h2>EXPLORE OUR SERVICES</h2>
+<p>KÉMOLUX now provides these <strong>SERVICES;</strong></p>
+
+<ul class="offer-highlights">
+    <li>Hairdressing</li>
+    <li>Lash Extensions</li>
+    <li>Wig Making</li>
+    <li>Nail Fixing</li>
+    <li>Glam Makeup</li>
+</ul>
+<br>
+  <button onclick="goToService()">BOOK A SESSION NOW</button>
+  <br>
+<p><strong>🎁 Limited-Time Perks:</strong></p>
+<ul class="offer-perks">
+    <li>Exclusive discounts on selected services</li>
+    <li>Priority booking for early clients</li>
+    <li>Premium products & luxury experience</li>
+</ul>
+<br>
+        <button onclick="goToService()">BOOK A SESSION NOW</button>
+    </div>
+</div>
+
+<div id="movable-assistant" class="assistant-floating-container">
+    <div class="assistant-box">
+        <div class="hero-model" id="drag-handle" style="cursor: move;">
+            <img src="images/kemo.jpeg" alt="Kemo Assistant" class="model-img">
+            <div class="model-info">
+                <h3>Kemm</h3>
+                <span class="status-dot"></span> Online
+            </div>
+            <span id="close-assistant" title="Close">&times;</span>
+        </div>
+
+        <div class="chat-bubble">
+            <p id="animated-text">Hi there!</p>
+        </div>
+
+        <a href="https://wa.me/2349162102701" class="wa-link" target="_blank">
+            Chat with Kemm
+        </a>
+    </div>
+</div>
+
+
+<!-- 🔝 FREE SHIPPING MARQUEE BAR -->
+<div class="shipping-bar">
+    <div class="marquee-track">
+        <span>Free shipping on all orders over ₦100,000 • Shop KÉMOLUX•</span>
+        <span>Free shipping on all orders over ₦100,000 • Shop KÉMOLUX•</span>
+    </div>
+</div>
+
+
+<!-- 🏠 MAIN CONTENT -->
+<main>
+
+<!-- ABOUT -->
+<section class="hero-glass">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>KÉMOLUX</h1>
+      <p>KÉMOLUX is your destination for premium fashion, accessories, and lifestyle products. Designed for elegance and convenience.</p>
+      </div>
+    </div>
+</section>
+
+<!-- TRENDING -->
+<section class="products">
+    <h2>🔥 Trending Items</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="images/val.jpeg">
+            <p style="color: #4B0082;">Luxury Loafers</p>
+        </div>
+        <div class="product-card">
+            <img src="images/bc.jpeg">
+            <p style="color: #4B0082;">Sneakers</p>
+        </div>
+    </div>
+</section>
+
+<!-- DISCOUNT -->
+<section class="products">
+    <h2>💸 Discounted Items</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="images/citizen.jpeg">
+            <p style="color: #4B0082;">Wristwatch - 20% OFF</p>
+        </div>
+        <div class="product-card">
+            <img src="images/pinkromper.jpeg">
+            <p style="color: #4B0082;"> Romper - Sale</p>
+        </div>
+    </div>
+</section>
+
+<section class="faq-container">
+    <div class="faq-header">
+        <h1>Frequently Asked Questions</h1>
+    </div>
+    
+    <div class="faq-list">
+        <details>
+            <summary>1. How long is delivery? <span>+</span></summary>
+            <div class="content">
+                <p>Delivery typically takes 3–7 working days depending on your location and the shipping method selected at checkout.</p>
+            </div>
+        </details>
+
+        <details>
+            <summary>2. Do you accept returns? <span>+</span></summary>
+            <div class="content">
+                <p>Yes, we accept returns within 24hours days of delivery. Items must be in their original condition and packaging.</p>
+            </div>
+        </details>
+    </div>
+</section>
+
+<footer class="footer-dark">
+    <div class="footer-grid">
+        <div class="footer-section">
+            <h3>Contacts</h3>
+            <div class="contact-item">
+                <span class="icon">📞</span>
+                <div>
+                    <strong>Contact Us</strong><br>
+                    <a href="tel:+2349162102701">+234 916 210 2701</a>
+                </div>
+            </div>
+            <div class="contact-item">
+                <span class="icon">✉️</span>
+                <div>
+                    <strong>Mail Us</strong><br>
+                    <a href="mailto:kemoluxwears@gmail.com">kemoluxwears@gmail.com</a>
+                </div>
+            </div>
+            <div class="contact-item">
+                <span class="icon">🎵</span>
+            <div>
+            <strong>TikTok</strong><br>
+            <a href="https://www.tiktok.com/@kemoluxwears?_r=1&_d=ekj90je402a270&sec_uid=MS4wLjABAAAA1C80fdkLL7bcO_SH3BRc4pcOj0X90ziJT2Ah_zhyXzqlxTl3g_NQoE_u6gPR1Zpd&share_author_id=7523158522243859512&sharer_language=en&source=h5_m&u_code=el6hbi325aj633&ug_btm=b8727,b0&social_share_type=4&utm_source=copy&sec_user_id=MS4wLjABAAAA1C80fdkLL7bcO_SH3BRc4pcOj0X90ziJT2Ah_zhyXzqlxTl3g_NQoE_u6gPR1Zpd&tt_from=copy&utm_medium=ios&utm_campaign=client_share&enable_checksum=1&user_id=7523158522243859512&share_link_id=D7127EE2-4E52-4CBB-927B-0A87604BA6A5&share_app_id=1233" target="_blank">@kemoluxwears</a>
+            </div>
+            </div>
+            <div class="contact-item">
+            <span class="icon">📸</span>
+             <div>
+            <strong>Instagram</strong><br>
+            <a href="https://www.instagram.com/kemoluxwears?igsh=ZmZuc3B1OTB4ZmRr&utm_source=qr" target="_blank">@kemoluxwears</a>
+            </div>
+        </div>
+    </div>
+    
+   <div class="footer-bottom">
+    <p>&copy; 2026 Kemoluxwears. All rights reserved.</p>
+    <p class="dev-credit">
+        Designed & Built by 
+        <a href="mailto:forwork247only@gmail.com?subject=Inquiry%20from%20Kemolux%20Store" class="dev-link">
+            KSO CREATIVE
+        </a>
+    </p>
+      <div class="admin-access">
+      <a href="login.html" class="admin-link">
+          <span>🔒</span> Staff Login
+      </a>
+  </div>
+</div>
+</main>
+
+<!-- 🔻 FOOTER NAV -->
+<footer class="bottom-nav">
+    <a href="home.html">🏠<span>Home</span></a>
+    <a href="collection.html">🛍<span>Collection</span></a>
+    <a href="wishlist.html">❤️<span>Wishlist</span></a>
+    <a href="cart.html">🛒<span>Cart</span></a>
+    <a href="service.html">💄<span>Services</span></a>
+</footer>
+
+<script>
+    const text = "";
+    let i = 0;
+    
+    function typeWriter() {
+        if (i < text.length) {
+            document.getElementById("animated-text").innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 50); // Speed of typing
+        }
+    }
+    window.onload = typeWriter;
+</script>
+</body>
+</html>

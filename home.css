@@ -1,0 +1,233 @@
+/* SECTIONS */
+section {
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+/* PRODUCT GRID */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.product-card {
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+img {
+    aspect-ratio: 1/1;
+}
+
+/* Glassy Hero Background */
+.hero-glass {
+  /* Sleek dark gradient overlaying your image */
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(10, 10, 10, 0.85)),
+    url('images/kemo.jpeg');
+  background-size: cover;
+  background-position: center;
+  min-height: 60vh; /* Gives it more presence on the screen */
+  display: flex;
+  align-items: center; /* Vertical center */
+  justify-content: center; /* Horizontal center */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Ensure content sits correctly */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 800px; /* Constrains text width for better readability */
+}
+
+/* KÉMOLUX Header */
+.hero-text h1 {
+  color: #ffffff;
+  font-size: clamp(2.5rem, 8vw, 4rem); /* Responsive sizing */
+  letter-spacing: 8px; /* High-end luxury spacing */
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Helps white text pop */
+}
+
+/* Sub-text description */
+.hero-text p {
+  color: #f0f0f0; /* Soft off-white */
+  font-size: 1.1rem;
+  line-height: 1.8;
+  font-weight: 300;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+
+/* FAQ Section Styling */
+.faq-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.faq-header h1 {
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+  font-weight: 800;
+}
+
+.faq-list details {
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+  cursor: pointer;
+}
+
+.faq-list summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-list .content {
+  padding: 15px 0;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Footer (Contact & Chat) Styling */
+.footer-dark {
+  background-color: #151921;
+  color: #ffffff;
+  padding: 60px 20px 20px;
+  margin-top: 50px;
+}
+
+.footer-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.footer-section h3 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.footer-section p {
+  color: #999;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+/* Contact Items */
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.contact-item .icon {
+  font-size: 1.5rem;
+  margin-right: 15px;
+  color: #ff3e6c;
+}
+
+.contact-item a {
+  color: #999;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact-item a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-top: 1px solid #232933;
+    padding-top: 20px;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.dev-credit {
+    margin-top: 8px;
+    letter-spacing: 1px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+.dev-link {
+    color: #ffffff; /* Makes your name pop */
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.dev-link:hover {
+    color: #ff3e6c; /* Matches your accent color */
+    border-bottom: 1px solid #ff3e6c;
+}
+
+.admin-access {
+    margin-top: 15px;
+}
+
+.admin-link {
+    color: #444; /* Very subtle grey */
+    text-decoration: none;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.admin-link span {
+    font-size: 0.6rem;
+    margin-right: 4px;
+    opacity: 0.5;
+}
+
+.admin-link:hover {
+    color: #ffffff; /* Brightens when you need to find it */
+    opacity: 1;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
