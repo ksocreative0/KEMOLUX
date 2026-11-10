@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KÉMOLUX | Premium Booking Experience</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="appointment.css">
+</head>
+<body>
+
+<!-- 1. The Form Container -->
+<div class="glass-container" id="form-container">
+    <header class="logo">KÉMOLUX</header>
+    <h2>Elegance within Reach</h2>
+    <div class="service-list">
+        HAIR STYLING • WIGGING • MAKEUP • LASHES • NAILS
+    </div>
+
+    <form id="booking-form">
+<div class="form-group">
+            <label>Full Identity</label>
+            <input type="text" name="name" placeholder="Last name, First name, Middle name" required>
+        </div>
+
+        <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" name="email" placeholder="example@email.com" required>
+        </div>
+
+        <div class="form-group">
+            <label>Contact Number</label>
+            <input type="tel" name="phone" placeholder="+234..." required>
+        </div>
+
+        <div class="form-group">
+            <label>Location Details</label>
+            <input type="text" name="location" placeholder="Country, State, & Town" required>
+        </div>
+
+        <div class="form-group">
+            <label>Address & Landmark</label>
+            <input type="text" name="address" placeholder="Street, House NO. & Nearest Bus Stop" required>
+        </div>
+
+        <div class="form-group">
+            <label>Appointment Date</label>
+            <input type="date" name="date" required>
+        </div>
+
+        <div class="form-group">
+            <label> BUDGET(₦)</label>
+            <input type="number" name="budget" placeholder="Amount in figures only, e.g 400000" required>
+        </div>
+
+         <div class="form-group">
+            <label>Service Mode</label>
+            <select name="service_type" required>
+              <option value="" disabled selected>Home or Salon?</option>
+              <option value="home service">Home Service (Luxury at Home)</option>
+              <option value="salon">Salon Visit</option>
+            </select>
+         </div>
+         
+        <div class="form-group">
+            <label>Requested Service</label>
+            <select name="service" required>
+              <option value="" disabled selected>Select a Service</option>
+              <option value="Hair styling">Hair styling</option>
+              <option value="Wigging">Wigging</option>
+              <option value="Makeup or Face Glam">Makeup or Face Glam</option>
+              <option value="Lash fixing">Lash fixing</option>
+              <option value="Nail Fixing">Nail Fixing</option>
+            </select>
+        </div>
+  
+        <button type="submit" id="submit-btn">CONFIRM BOOKING</button>
+    </form>
+</div>
+
+<!-- 2. The Success Message (Hidden by default via inline style or CSS) -->
+<div class="glass-container" id="success-message" style="display: none; text-align: center;">
+    <div style="font-size: 50px; margin-bottom: 20px; colour: #4B0082">✅</div>
+    <h2 style="font-family: 'Cinzel';">Reserved</h2>
+    <p style="colour: black; line-height: 1.6;">Your request has been received. A KÉMOLUX agent will contact you shortly to finalize your booked session.</p>
+    <button onclick="location.reload()" class="btn">NEW BOOKING</button>
+</div>
+
+<!-- 🔻 FOOTER NAV -->
+<footer class="bottom-nav">
+    <a href="home.html">🏠<span>Home</span></a>
+    <a href="collection.html">🛍<span>Collection</span></a>
+    <a href="wishlist.html">❤️<span>Wishlist</span></a>
+    <a href="cart.html">🛒<span>Cart</span></a>
+    <a href="service.html">💄<span>Services</span></a>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase-config.js"></script>
+<script src="script.js" defer></script>
+</body>
+</html>

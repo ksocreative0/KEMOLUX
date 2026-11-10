@@ -1,0 +1,142 @@
+:root {
+      --primary: #4B0082;
+      --accent: green;
+      --bg: #f9f9f7;
+      --white: #ffffff;
+      --text: #1a1a1a;
+      --kemolux-glass: rgba(255, 255, 255, 0.1);
+      --kemolux-purple: #4B0082;
+      --kemolux-accent: #2e7d32; /* Emerald Green */
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    body {
+  color: var(--text);
+  
+  background: 
+    linear-gradient(
+      135deg,
+      rgba(27, 94, 32, 0.8),
+      rgba(75, 0, 130, 0.8)
+    ),
+    url('https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1470&auto=format&fit=crop');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* makes it stay nicely */
+  
+  min-height: 100vh;
+}
+    
+      .glass-container {
+    width: 90%;
+    max-width: 550px;
+   background: linear-gradient(135deg, green 5%, white 90%, green 60%);
+  opacity: 0;
+transform: translateX(100px); /* Start 100px to the right */
+  animation: slideInRight 1.5s ease forwards;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    padding: 40px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+    /* Ensures padding doesn't break width */
+  }
+  
+    /* HEADER */
+    .header {
+      
+      color: var(--primary);
+      text-align: center;
+      padding: 20px;
+    }
+    
+    /* SECTIONS */
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    
+    h2 {
+      margin-bottom: 15px;
+      color: var(--primary);
+    }
+    
+    /* ABOUT */
+    .about p {
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.6;
+    }
+    
+    /* SERVICES */
+    .services {
+      background: white;
+    }
+    
+    .service-box {
+      margin: 25px auto;
+      max-width: 300px;
+      padding: 20px;
+      border-radius: 15px;
+      background: linear-gradient(135deg, green 30%, white 50%);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      opacity: 0;
+transform: translateX(100px); /* Start 100px to the right */
+  animation: slideInRight 3s ease forwards;
+    }
+    
+    .service-box img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    
+    /* WHY */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 10px;
+    }
+    
+    
+    /* CTA */
+    .cta {
+      color: white;
+      padding-top: 3px;
+      margin-bottom: 50px;
+    }
+    
+    .btn {
+            width: 100%;
+            background: var(--kemolux-accent); /* Changed from Gold to Purple */
+            color: black;
+            padding: 18px;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 10px;
+            letter-spacing: 2px;
+        }
+    
+    .btn:hover {
+      background: var(--kemolux-purple); /* Hovers to Green */
+            letter-spacing: 4px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
