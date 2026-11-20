@@ -1,2 +1,0 @@
-# KEMOLUX
-E-commerce Store
