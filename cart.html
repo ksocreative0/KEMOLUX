@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KÉMOLUX Cart</title>
+
+<link rel="stylesheet" href="global.css">
+<link rel="stylesheet" href="collection.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase-config.js"></script>
+<script src="script.js" defer></script>
+</head>
+
+<body>
+
+<!-- SHIPPING BAR -->
+<div class="shipping-bar">
+    <div class="marquee-track">
+        <span>Free shipping on all orders over ₦100,000 • Shop KÉMOLUX Luxury •</span>
+        <span>Free shipping on all orders over ₦100,000 • Shop KÉMOLUX Luxury •</span>
+    </div>
+</div>
+    
+<section id="cart" class="page active">
+    <div class="container">
+        <h3>Your Cart</h3>
+        <div id="cartItems"></div>
+        <h4 id="cartTotal"></h4>
+        <a class="btn" id="checkoutLink" href="shipping.html">Continue to checkout</a>
+    </div>
+</section>
+
+
+
+<!-- FOOTER -->
+<footer class="bottom-nav">
+    <a href="home.html">🏠<span>Home</span></a>
+    <a href="collection.html">🛍<span>Collection</span></a>
+    <a href="wishlist.html">❤️<span>Wishlist</span></a>
+    <a href="cart.html">🛒<span>Cart</span></a>
+    <a href="service.html">💄<span>Services</span></a>
+</footer>
+<script>
+    // Force a display refresh when this specific page loads
+    window.addEventListener('DOMContentLoaded', () => {
+        if (typeof displayCart === "function") {
+            displayCart();
+        }
+    });
+</script>
+</body>
+</html>

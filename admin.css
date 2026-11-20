@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+:root{--primary-purple:#4B0082;--accent-green:#16834a}*{box-sizing:border-box}body{margin:0;font-family:'Montserrat',sans-serif;background:#faf7fc;color:#24182e}.welcome-container{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:25px;background:linear-gradient(#180927bb,#180927bb),url('images/kemo.jpeg') center/cover}.auth-card,.admin-card{width:min(100%,460px);padding:32px;background:#ffffffef;border:1px solid #d8c6e4;border-radius:20px;box-shadow:0 20px 60px #12051d55;text-align:center}.brand-name{font-size:2.2rem;letter-spacing:4px;color:var(--primary-purple);margin:0}.tagline{color:#16834a;font-weight:600}.auth-card input{width:100%;padding:13px;margin:8px 0;border:1px solid #d9cce0;border-radius:8px;font:inherit}.btn{width:100%;padding:13px;background:var(--primary-purple);color:#fff;border:0;border-radius:8px;font-weight:700;font-family:inherit}.btn:hover{background:#16834a}.toggle-text,.forgot-pw{cursor:pointer}.highlight{color:#16834a;font-weight:800}#home-arrow{display:none;margin-left:20px;color:white;font-weight:700}.admin-shell{width:min(1400px,96%);margin:auto;padding:25px 0}.admin-head{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}.admin-head h1{color:#4B0082;margin:0}.admin-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:24px 0}.admin-tab{border:1px solid #d8c6e4;background:white;color:#4B0082;padding:11px 15px;border-radius:9px;font:inherit;font-weight:700}.admin-tab.active{background:#4B0082;color:white}
+.admin-panel{background:white;border:1px solid #e4d9eb;border-radius:16px;padding:24px;box-shadow:0 8px 25px #2710330a}.admin-panel[hidden]{display:none}.admin-panel h2{color:#4B0082}.admin-panel input,.admin-panel select,.admin-panel textarea{font:inherit;padding:11px;border:1px solid #d9cce0;border-radius:8px;width:100%;margin:5px 0 14px}.admin-panel label{font-size:.85rem;font-weight:700;color:#4B0082}.admin-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}.admin-note{background:#f1e9f8;padding:14px;border-radius:10px;color:#3d2450;font-size:.9rem}.danger-zone{margin-top:20px}.user-item{padding:14px;background:#f8f3fb;border-left:4px solid #16834a;border-radius:8px;margin:8px 0;color:#24182e}.admin-product{display:flex;gap:12px;align-items:center}.admin-product .btn-danger{width:auto}.btn-danger{background:#fff0f0;color:#a21c36;border:1px solid #f2c9d0;padding:9px;border-radius:8px;font:inherit;font-weight:700;cursor:pointer}@media(max-width:600px){.admin-shell{width:94%}.admin-panel{padding:15px}.admin-head{align-items:flex-start}.auth-card{padding:25px}}
+
+/* Compact stacked product actions */
+.admin-product{align-items:center;min-width:0}
+.admin-product>div{flex:1;min-width:0}
+.admin-product-actions{display:flex;flex-direction:column;gap:6px;flex:0 0 82px}
+.admin-product-actions button{width:100%;min-height:34px;padding:7px 8px;font-size:.78rem}
+.admin-product .btn-ghost{border:1px solid #d8c6e4;border-radius:8px;background:#fff;color:#4B0082;font-weight:700;cursor:pointer}
+.admin-product .btn-danger{background:#fff0f0;color:#a21c36;border:1px solid #f2c9d0;padding:7px 8px;border-radius:8px;font-size:.78rem}
+.product-edit-overlay{display:none;position:fixed;inset:0;z-index:999;background:#160b20b8;align-items:center;justify-content:center;padding:18px}
+.product-edit-overlay.active{display:flex}
+.product-edit-dialog{width:min(100%,1000px);max-height:92vh;overflow:auto;background:#fff;border-radius:18px;padding:22px;box-shadow:0 20px 70px #0005}
+.product-edit-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+.product-edit-heading h2{margin:0;color:#4B0082}
+.product-edit-close{width:38px;height:38px;border:0;border-radius:50%;background:#f2ebf6;font-size:25px;cursor:pointer}
+.product-edit-layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(260px,.8fr);gap:22px}
+.product-edit-fields label{display:block;margin:9px 0 4px;color:#4B0082;font-size:.82rem;font-weight:700}
+.product-edit-fields input,.product-edit-fields select,.product-edit-fields textarea{width:100%;padding:10px;border:1px solid #d9cce0;border-radius:8px;font:inherit}
+.product-edit-two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.product-edit-hint{font-size:.78rem;color:#75677e;margin:8px 0}
+.edit-existing-images{display:flex;flex-wrap:wrap;gap:9px;margin-top:8px}
+.edit-image-choice{display:flex!important;align-items:center;gap:6px;padding:6px;border:1px solid #e6dceb;border-radius:9px;color:#34223e!important}
+.edit-image-choice input{width:auto!important}
+.edit-image-choice img{width:46px;height:54px;object-fit:cover;border-radius:5px}
+.edit-image-choice span{font-size:.72rem}
+.product-live-preview{background:#faf7fc;border:1px solid #eadff0;border-radius:12px;padding:13px;align-self:start;position:sticky;top:0}
+.product-live-preview h3{margin:0 0 10px;color:#4B0082}
+.edit-preview-card{background:#fff;border:1px solid #eadff0;border-radius:10px;overflow:hidden}
+.edit-preview-images{display:flex;gap:5px;overflow-x:auto;padding:7px}
+.edit-preview-images img{width:90px;height:110px;object-fit:cover;border-radius:7px;flex:0 0 auto}
+.edit-preview-placeholder{padding:30px 8px;color:#887b91;text-align:center}
+.edit-preview-copy{padding:12px}
+.edit-preview-copy small{color:#16834a;font-weight:700}
+.edit-preview-copy h4{margin:6px 0;color:#24182e}
+.edit-preview-copy strong{color:#16834a}
+.edit-preview-copy p{font-size:.82rem;color:#716879;margin-top:8px;white-space:pre-wrap}
+.product-edit-footer{display:flex;justify-content:flex-end;gap:10px;margin-top:20px;padding-top:14px;border-top:1px solid #eee}
+.product-edit-footer button{width:auto;padding:10px 18px}
+@media(max-width:700px){
+ .admin-product{align-items:flex-start;flex-wrap:wrap}
+ .admin-product>div{flex:1 1 calc(100% - 90px)}
+ .admin-product-actions{flex:0 0 76px}
+ .product-edit-dialog{padding:15px}
+ .product-edit-layout{grid-template-columns:1fr}
+ .product-live-preview{position:static;grid-row:1}
+}
